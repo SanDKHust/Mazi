@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">My App</string>
+    <string name="text_title">Title</string>
+    <string name="text_phat_am">Phát âm</string>
+    <string name="text_cach_viet">Cách viết</string>
+    <string name="color_1">#F44336</string>
+    <string name="color_2">#9C27B0</string>
+    <string name="color_3">#2196F3</string>
+    <string name="color_4">#CDDC39</string>
+    <string name="color_5">#FFC107</string>
+    <string name="color_6">#795548</string>
+    <string name="color_7">#9E9E9E</string>
+    <string name="color_8">#EF5350</string>
+    <string name="color_9">#AB47BC</string>
+    <string name="color_10">#42A5F5</string>
+    <string name="color_11">#4CAF50</string>
+    <string name="color_12">#CDDC39</string>
+    <string name="color_13">#FFEB3B</string>
+    <string name="color_14">#FF7043</string>
+    <string name="color_15">#BDBDBD</string>
+    <string name="color_16">#FFFF00</string>
+    <string name="color_17">#00E676</string>
+    <string name="color_18">#40C4FF</string>
+    <string name="color_19">#009688</string>
+    <string name="color_20">#2979FF</string>
+    <string name="text_vi_du">Ví dụ</string>
+    <string name="text_close">Close</string>
+    <string name="text_kiem_tra">Kiểm tra</string>
+</resources>

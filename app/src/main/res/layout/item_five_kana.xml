@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_marginTop="@dimen/dp_4"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include layout="@layout/item_kana"
+        android:id="@+id/view_item_one_five_kana"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_width="0dp" />
+    <include layout="@layout/item_kana"
+        android:layout_marginLeft="@dimen/dp_4"
+        android:id="@+id/view_item_tow_five_kana"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/dp_4" />
+    <include layout="@layout/item_kana"
+        android:layout_marginLeft="@dimen/dp_4"
+        android:id="@+id/view_item_three_five_kana"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/dp_4" />
+    <include layout="@layout/item_kana"
+        android:layout_marginLeft="@dimen/dp_4"
+        android:id="@+id/view_item_four_five_kana"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/dp_4" />
+    <include layout="@layout/item_kana"
+        android:layout_marginLeft="@dimen/dp_4"
+        android:id="@+id/view_item_five_five_kana"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/dp_4" />
+</LinearLayout>

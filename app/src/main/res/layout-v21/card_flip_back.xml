@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_flip_back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dp_40"
+    android:elevation="10dp"
+    android:background="@drawable/border_flip"
+    android:padding="@dimen/dp_10"
+    tools:targetApi="lollipop">
+
+    <FrameLayout
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/btn_audio_card_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_ic_volume"
+            android:padding="@dimen/dp_8"
+            app:srcCompat="@drawable/ic_volume_up_green"
+            tools:ignore="ContentDescription" />
+        <ImageButton
+            android:id="@+id/btn_audio_play_back"
+            android:visibility="gone"
+            android:padding="@dimen/dp_8"
+            android:background="@drawable/border_ic_volume_green"
+            app:srcCompat="@drawable/ic_volume_up_30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/text_phat_am_item_back"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/border_text_view"
+        android:paddingLeft="@dimen/dp_4"
+        android:paddingStart="@dimen/dp_4"
+        android:text="@string/text_phat_am"
+        android:textSize="16sp"
+        tools:ignore="RelativeOverlap,RtlHardcoded,RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/text_cach_viet"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_phat_am_item_back"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/border_text_view"
+        android:paddingLeft="@dimen/dp_4"
+        android:paddingStart="@dimen/dp_4"
+        android:text="@string/text_cach_viet"
+        android:textSize="16sp"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+    <FrameLayout
+        android:id="@+id/frame_write"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_cach_viet"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <vn.edu.hust.soict.khacsan.myapp.svgwriter.SVGCanvasView
+            android:id="@+id/svg_cana_view"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sizeSVG" />
+
+        <ImageButton
+            android:id="@+id/btn_repaint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:background="@drawable/border_btn_renew"
+            app:srcCompat="@drawable/ic_autorenew"
+            tools:ignore="ContentDescription" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_example"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frame_write"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/border_text_view"
+        android:text="@string/text_vi_du"
+        android:textSize="16sp" />
+
+
+    <ImageButton
+        android:padding="@dimen/dp_4"
+        android:id="@+id/btn_left_card_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center_vertical"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_left_black"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:padding="@dimen/dp_4"
+        android:id="@+id/btn_right_card_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end|center_vertical"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_right_black"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <LinearLayout
+        android:id="@+id/line_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/btn_left_card_back"
+        android:layout_gravity="top"
+        android:layout_marginTop="0dp"
+        android:background="@color/background_grey"
+        android:orientation="horizontal" />
+    <TextView
+        android:gravity="center"
+        android:layout_below="@id/line_horizontal"
+        android:id="@+id/text_page_back_flip"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="RelativeOverlap" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_example"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/line_horizontal"
+        android:layout_below="@id/text_example"
+        android:layout_marginTop="@dimen/dp_10">
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>

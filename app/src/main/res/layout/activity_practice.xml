@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp_10"
+    android:id="@+id/rl_practice"
+    tools:context=".view.activity.PracticeActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_practice_close"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_close"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_practice"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="7.5"
+            android:progressDrawable="@drawable/border_progressbar" />
+
+        <LinearLayout
+            android:padding="@dimen/dp_4"
+            android:gravity="center"
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_process"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border_ic_volume"
+                android:gravity="center"
+                android:text="0/10" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_question"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center"
+        android:text="Question"
+        android:textSize="16sp" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/toolbar_question"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/border_ic_volume"
+        android:layout_marginEnd="@dimen/dp_10">
+
+        <ImageButton
+            android:id="@+id/btn_audio_practice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_volume_up_green"
+            tools:ignore="ContentDescription,VectorDrawableCompat" />
+
+        <ImageButton
+            android:id="@+id/btn_audio_play_practice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/border_ic_volume_green"
+            android:src="@drawable/ic_volume_up_30dp"
+            android:visibility="gone"
+            tools:ignore="ContentDescription,VectorDrawableCompat" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_question"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="Answer: "
+        android:textSize="16sp" />
+
+    <GridLayout
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dp_40"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:padding="@dimen/dp_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_answer"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/dp_10"
+            android:id="@+id/btn_answer_a"
+            android:layout_width="@dimen/sizeBtnAnswer"
+            android:layout_height="@dimen/sizeBtnAnswer"
+            android:background="@drawable/border_item_kana" />
+        <Button
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/dp_10"
+            android:id="@+id/btn_answer_b"
+            android:layout_width="@dimen/sizeBtnAnswer"
+            android:layout_height="@dimen/sizeBtnAnswer"
+            android:background="@drawable/border_item_kana" />
+        <Button
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/dp_10"
+            android:id="@+id/btn_answer_c"
+            android:layout_width="@dimen/sizeBtnAnswer"
+            android:layout_height="@dimen/sizeBtnAnswer"
+            android:background="@drawable/border_item_kana" />
+        <Button
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/dp_10"
+            android:id="@+id/btn_answer_d"
+            android:layout_width="@dimen/sizeBtnAnswer"
+            android:layout_height="@dimen/sizeBtnAnswer"
+            android:background="@drawable/border_item_kana" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btn_check_and_continue"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:text="@string/text_kiem_tra"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/border_btn_check_answer"
+        android:padding="@dimen/dp_4"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/container_flip_front"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/dp_40"
+    android:elevation="10dp"
+    android:background="@drawable/border_flip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="UnusedAttribute">
+    <FrameLayout
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/btn_audio_card_front"
+            android:padding="@dimen/dp_8"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@drawable/border_ic_volume"
+            app:srcCompat="@drawable/ic_volume_up_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription" />
+        <ImageButton
+            android:id="@+id/btn_audio_play_front"
+            android:visibility="gone"
+            android:padding="@dimen/dp_8"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@drawable/border_ic_volume_green"
+            app:srcCompat="@drawable/ic_volume_up_30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription" />
+    </FrameLayout>
+
+    <TextView
+        android:textSize="108sp"
+        android:id="@+id/text_item_front_card"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="RelativeOverlap" />
+    <TextView
+        android:layout_margin="@dimen/dp_4"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/text_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
