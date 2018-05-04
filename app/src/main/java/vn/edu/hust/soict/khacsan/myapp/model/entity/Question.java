@@ -6,6 +6,8 @@ import android.os.Parcelable;
 import java.util.ArrayList;
 import java.util.List;
 
+import vn.edu.hust.soict.khacsan.myapp.model.database.Kana;
+
 public class Question implements Parcelable {
     private Kana kana;
     private List<String> answer;

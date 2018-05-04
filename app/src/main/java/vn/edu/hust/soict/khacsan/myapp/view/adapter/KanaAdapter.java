@@ -1,20 +1,17 @@
 package vn.edu.hust.soict.khacsan.myapp.view.adapter;
 
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import vn.edu.hust.soict.khacsan.myapp.R;
-import vn.edu.hust.soict.khacsan.myapp.model.entity.Item;
 import vn.edu.hust.soict.khacsan.myapp.model.entity.ItemListKana;
-import vn.edu.hust.soict.khacsan.myapp.model.entity.Kana;
+import vn.edu.hust.soict.khacsan.myapp.model.database.Kana;
 
 public class KanaAdapter extends BaseMultiItemQuickAdapter<ItemListKana, BaseViewHolder> {
     private int typeTable = 0;

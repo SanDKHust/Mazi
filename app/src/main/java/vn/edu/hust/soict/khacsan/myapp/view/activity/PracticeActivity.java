@@ -1,19 +1,14 @@
 package vn.edu.hust.soict.khacsan.myapp.view.activity;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.speech.tts.TextToSpeech;
-import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -31,7 +26,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Queue;
@@ -41,12 +35,12 @@ import es.dmoral.toasty.Toasty;
 import vn.edu.hust.soict.khacsan.myapp.R;
 import vn.edu.hust.soict.khacsan.myapp.controller.PracticeController;
 import vn.edu.hust.soict.khacsan.myapp.model.GetAudioFile;
-import vn.edu.hust.soict.khacsan.myapp.model.entity.Kana;
 import vn.edu.hust.soict.khacsan.myapp.model.entity.Question;
+import vn.edu.hust.soict.khacsan.myapp.model.utils.DialogConfirm;
 import vn.edu.hust.soict.khacsan.myapp.model.utils.NetworkUtil;
 
-import static vn.edu.hust.soict.khacsan.myapp.view.Fragment.FragmentAlphabet.URL_GET_AUDIO;
-import static vn.edu.hust.soict.khacsan.myapp.view.activity.ActivityAlphabetTable.TYPE_KANA;
+import static vn.edu.hust.soict.khacsan.myapp.view.fragment.FragmentAlphabet.URL_GET_AUDIO;
+import static vn.edu.hust.soict.khacsan.myapp.view.activity.AlphabetTableActivity.TYPE_KANA;
 
 public class PracticeActivity extends AppCompatActivity implements View.OnClickListener,TextToSpeech.OnInitListener, MediaPlayer.OnCompletionListener,
         TextToSpeech.OnUtteranceCompletedListener, GetAudioFile.AudioListener {
@@ -196,7 +190,7 @@ public class PracticeActivity extends AppCompatActivity implements View.OnClickL
             case R.id.btn_check_and_continue: {
                 if (mPopupWindow.isShowing()) {
                     mBtnCheck.setText("Kiểm tra");
-                    updateUi(indexSelect);
+                    updateUiUnselect(indexSelect);
                     mPopupWindow.dismiss();
                     upDateQuestion();
                     nameAudio = null;
@@ -240,51 +234,19 @@ public class PracticeActivity extends AppCompatActivity implements View.OnClickL
                 break;
             }
             case R.id.btn_answer_a: {
-                if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-                    mBtnAnswerA.setBackgroundDrawable(ContextCompat.getDrawable(mContext, R.drawable.background_answer_selected));
-                } else {
-                    mBtnAnswerA.setBackground(ContextCompat.getDrawable(mContext, R.drawable.background_answer_selected));
-                }
-                mBtnAnswerA.setTextColor(this.getResources().getColor(R.color.colorWhite));
-                updateUi(indexSelect);
-                textSelect = mBtnAnswerA.getText().toString().trim();
-                indexSelect = 1;
+                updateSelect(mBtnAnswerA,1);
                 break;
             }
             case R.id.btn_answer_b: {
-                if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-                    mBtnAnswerB.setBackgroundDrawable(ContextCompat.getDrawable(mContext, R.drawable.background_answer_selected));
-                } else {
-                    mBtnAnswerB.setBackground(ContextCompat.getDrawable(mContext, R.drawable.background_answer_selected));
-                }
-                mBtnAnswerB.setTextColor(this.getResources().getColor(R.color.colorWhite));
-                updateUi(indexSelect);
-                textSelect = mBtnAnswerB.getText().toString().trim();
-                indexSelect = 2;
+                updateSelect(mBtnAnswerB,2);
                 break;
             }
             case R.id.btn_answer_c: {
-                if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-                    mBtnAnswerC.setBackgroundDrawable(ContextCompat.getDrawable(mContext, R.drawable.background_answer_selected));
-                } else {
-                    mBtnAnswerC.setBackground(ContextCompat.getDrawable(mContext, R.drawable.background_answer_selected));
-                }
-                mBtnAnswerC.setTextColor(this.getResources().getColor(R.color.colorWhite));
-                updateUi(indexSelect);
-                textSelect = mBtnAnswerC.getText().toString().trim();
-                indexSelect = 3;
+                updateSelect(mBtnAnswerC,3);
                 break;
             }
             case R.id.btn_answer_d: {
-                if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-                    mBtnAnswerD.setBackgroundDrawable(ContextCompat.getDrawable(mContext, R.drawable.background_answer_selected));
-                } else {
-                    mBtnAnswerD.setBackground(ContextCompat.getDrawable(mContext, R.drawable.background_answer_selected));
-                }
-                mBtnAnswerD.setTextColor(this.getResources().getColor(R.color.colorWhite));
-                updateUi(indexSelect);
-                textSelect = mBtnAnswerD.getText().toString().trim();
-                indexSelect = 4;
+                updateSelect(mBtnAnswerD,4);
                 break;
             }
             case R.id.btn_audio_practice:{
@@ -306,9 +268,27 @@ public class PracticeActivity extends AppCompatActivity implements View.OnClickL
                 break;
             }
             case R.id.btn_practice_close:{
-                finish();
+                DialogConfirm.showYesNoDialog(PracticeActivity.this,"Bạn có chắc chắn muốn thoát?");
                 break;
             }
+        }
+    }
+
+    private void updateSelect(Button btn,int pos) {
+        if(indexSelect == pos) {
+            updateUiUnselect(indexSelect);
+            indexSelect = -1;
+            textSelect = "";
+        }else {
+            if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                btn.setBackgroundDrawable(ContextCompat.getDrawable(mContext, R.drawable.background_answer_selected));
+            } else {
+                btn.setBackground(ContextCompat.getDrawable(mContext, R.drawable.background_answer_selected));
+            }
+            btn.setTextColor(this.getResources().getColor(R.color.colorWhite));
+            updateUiUnselect(indexSelect);
+            textSelect = btn.getText().toString().trim();
+            indexSelect = pos;
         }
     }
 
@@ -321,7 +301,7 @@ public class PracticeActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
-    private void updateUi(int pos) {
+    private void updateUiUnselect(int pos) {
         final int sdk = android.os.Build.VERSION.SDK_INT;
         if (pos != -1) {
             if (pos == 1) {

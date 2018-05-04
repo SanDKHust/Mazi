@@ -1,7 +1,5 @@
 package vn.edu.hust.soict.khacsan.myapp.controller;
 
-import android.util.Log;
-
 import com.raizlabs.android.dbflow.sql.language.SQLite;
 
 import java.util.Collections;
@@ -10,7 +8,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Random;
 
-import vn.edu.hust.soict.khacsan.myapp.model.entity.Kana;
+import vn.edu.hust.soict.khacsan.myapp.model.database.Kana;
 import vn.edu.hust.soict.khacsan.myapp.model.entity.Question;
 
 public class PracticeController {

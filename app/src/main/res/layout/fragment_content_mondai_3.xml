@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/line_audio_fragment_modai_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@drawable/background_audio_controller"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_4"
+            android:weightSum="10"
+            tools:ignore="UselessParent">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:visibility="gone"
+                    android:id="@+id/btn_play_or_pause_fm_modai3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/ic_play_arrow" />
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:layout_gravity="center"
+                    android:id="@+id/avi_progress_bar_fm_mondai3"
+                    style="@style/AVLoadingIndicatorView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:visibility="visible"
+                    app:indicatorColor="@color/colorWhite"
+                    app:indicatorName="LineSpinFadeLoaderIndicator" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/text_time_play_fm_modai3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="00:00"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <SeekBar
+                android:id="@+id/seek_bar_fm_modai3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"/>
+
+            <TextView
+                android:id="@+id/text_total_time_fm_modai3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-00:00"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:id="@+id/btn_volume_change_fm_modai3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/ic_volume_up_24dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/line_question_1"
+            android:layout_below="@id/line_audio_fragment_modai_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_index_1_fm_mondai3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:background="@drawable/border_ic_volume"
+                android:gravity="center"
+                android:text="1" />
+            <LinearLayout
+                android:layout_alignTop="@id/text_index_1_fm_mondai3"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/btn_true_index1_fm_mondai3"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_check_black_png"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageButton
+                    android:id="@+id/btn_false_index1_fm_mondai3"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_close_black_png"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_40" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp_8"
+            android:id="@+id/line_question_2"
+            android:layout_below="@id/line_question_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_index_2_fm_mondai3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:background="@drawable/border_ic_volume"
+                android:gravity="center"
+                android:text="2" />
+            <LinearLayout
+                android:layout_alignTop="@id/text_index_2_fm_mondai3"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/btn_true_index2_fm_mondai3"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_check_black_png"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageButton
+                    android:id="@+id/btn_false_index2_fm_mondai3"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_close_black_png"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_40" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp_8"
+            android:id="@+id/line_question_3"
+            android:layout_below="@id/line_question_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_index_3_fm_mondai3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:background="@drawable/border_ic_volume"
+                android:gravity="center"
+                android:text="3" />
+            <LinearLayout
+                android:layout_alignTop="@id/text_index_3_fm_mondai3"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/btn_true_index3_fm_mondai3"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_check_black_png"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageButton
+                    android:id="@+id/btn_false_index3_fm_mondai3"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_close_black_png"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_40" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp_8"
+            android:id="@+id/line_question_4"
+            android:layout_below="@id/line_question_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_index_4_fm_mondai3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:background="@drawable/border_ic_volume"
+                android:gravity="center"
+                android:text="4" />
+            <LinearLayout
+                android:layout_alignTop="@id/text_index_4_fm_mondai3"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/btn_true_index4_fm_mondai3"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_check_black_png"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageButton
+                    android:id="@+id/btn_false_index4_fm_mondai3"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_close_black_png"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_40" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp_8"
+            android:id="@+id/line_question_5"
+            android:layout_below="@id/line_question_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:id="@+id/text_index_5_fm_mondai3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/border_ic_volume"
+                android:gravity="center"
+                android:text="5" />
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/btn_true_index5_fm_mondai3"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_check_black_png"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageButton
+                    android:id="@+id/btn_false_index5_fm_mondai3"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_close_black_png"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_40" />
+            </LinearLayout>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/btn_check_fm_mondai3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_question_5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/border_btn_check_answer"
+            android:text="@string/text_kiem_tra"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

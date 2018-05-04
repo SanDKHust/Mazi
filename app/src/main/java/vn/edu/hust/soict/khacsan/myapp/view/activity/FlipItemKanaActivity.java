@@ -14,18 +14,18 @@ import com.raizlabs.android.dbflow.sql.language.SQLite;
 import java.util.List;
 
 import vn.edu.hust.soict.khacsan.myapp.R;
-import vn.edu.hust.soict.khacsan.myapp.model.entity.Kana;
-import vn.edu.hust.soict.khacsan.myapp.view.Fragment.ClickFlipListener;
-import vn.edu.hust.soict.khacsan.myapp.view.Fragment.FragmentContainerFlip;
-import vn.edu.hust.soict.khacsan.myapp.view.Fragment.ViewPageFlipAdapter;
+import vn.edu.hust.soict.khacsan.myapp.model.database.Kana;
+import vn.edu.hust.soict.khacsan.myapp.view.fragment.ClickFlipListener;
+import vn.edu.hust.soict.khacsan.myapp.view.fragment.FragmentContainerFlip;
+import vn.edu.hust.soict.khacsan.myapp.view.fragment.ViewPagerFlipAdapter;
 
-import static vn.edu.hust.soict.khacsan.myapp.view.Fragment.FragmentAlphabet.KANA_SELECT_FLIP;
-import static vn.edu.hust.soict.khacsan.myapp.view.Fragment.FragmentAlphabet.TYPE_TABLE;
+import static vn.edu.hust.soict.khacsan.myapp.view.fragment.FragmentAlphabet.KANA_SELECT_FLIP;
+import static vn.edu.hust.soict.khacsan.myapp.view.fragment.FragmentAlphabet.TYPE_TABLE;
 
 public class FlipItemKanaActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, ClickFlipListener {
     private ViewPager mViewPager;
     private Toolbar mToolbar;
-    private ViewPageFlipAdapter adapter;
+    private ViewPagerFlipAdapter adapter;
     private Kana kana;
     private List<Kana> kanas;
     private int typeTable;
@@ -61,7 +61,7 @@ public class FlipItemKanaActivity extends AppCompatActivity implements ViewPager
         mPositionLeft = pos == 0 ? pos : (pos - 1);
         mPositionRight = pos == (page - 1) ? pos : pos + 1;
 
-        adapter = new ViewPageFlipAdapter(getSupportFragmentManager());
+        adapter = new ViewPagerFlipAdapter(getSupportFragmentManager());
         for (int i = 0; i < pos + 2; i++) {
             adapter.addRightFragment(FragmentContainerFlip.newInstance(kanas.get(i), typeTable, page, this));
         }

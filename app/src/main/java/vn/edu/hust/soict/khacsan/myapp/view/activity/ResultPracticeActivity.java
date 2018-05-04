@@ -7,7 +7,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -20,7 +19,7 @@ import vn.edu.hust.soict.khacsan.myapp.model.entity.Question;
 import vn.edu.hust.soict.khacsan.myapp.model.entity.SectionQuestion;
 import vn.edu.hust.soict.khacsan.myapp.view.adapter.QuestionAdapter;
 
-import static vn.edu.hust.soict.khacsan.myapp.view.activity.ActivityAlphabetTable.TYPE_KANA;
+import static vn.edu.hust.soict.khacsan.myapp.view.activity.AlphabetTableActivity.TYPE_KANA;
 import static vn.edu.hust.soict.khacsan.myapp.view.activity.PracticeActivity.INTENT_QUESTION;
 import static vn.edu.hust.soict.khacsan.myapp.view.activity.PracticeActivity.LIST_QUESTION;
 
@@ -110,7 +109,10 @@ public class ResultPracticeActivity extends AppCompatActivity implements View.On
 
     @Override
     public void onBackPressed() {
-
+        Intent startMain = new Intent(Intent.ACTION_MAIN);
+        startMain.addCategory(Intent.CATEGORY_HOME);
+        startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(startMain);
     }
 
     @Override
@@ -119,7 +121,7 @@ public class ResultPracticeActivity extends AppCompatActivity implements View.On
         if(id == R.id.btn_continues_result){
             startActivity(new Intent(this,PracticeActivity.class));
         }else if(id == R.id.btn_completed_result){
-            startActivity(new Intent(this,ActivityAlphabetTable.class));
+            startActivity(new Intent(this,AlphabetTableActivity.class));
         }
     }
 }

@@ -26,4 +26,10 @@
     <string name="text_vi_du">Ví dụ</string>
     <string name="text_close">Close</string>
     <string name="text_kiem_tra">Kiểm tra</string>
+    <string name="text_hoan_thanh">Hoàn thành</string>
+    <string name="text_tiep_tuc">Tiếp tục</string>
+    <string name="text_bai_1">Bài 1</string>
+    <string name="text_tu_moi">Từ mới</string>
+    <string name="text_done">Done</string>
+    <string name="text_enter_answer">Nhập đáp án</string>
 </resources>

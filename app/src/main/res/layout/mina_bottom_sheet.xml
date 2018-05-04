@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet_mina"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    android:background="#d2d6db">
+    <RelativeLayout
+        android:background="#f0f1f2"
+        android:id="@+id/menu_bottm_sheet"
+        android:layout_width="match_parent"
+        android:layout_height= "wrap_content">
+        <Button
+            android:id="@+id/btn_done_picker"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorPrimary"
+            android:textAllCaps="false"
+            android:background="@android:color/transparent"
+            android:text="@string/text_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" />
+
+        <ImageButton
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_4"
+            android:id="@+id/btn_bottom_sheet_drop_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_arrow_drop_up"
+            tools:ignore="ContentDescription" />
+        <ImageButton
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:padding="@dimen/dp_4"
+            android:layout_toRightOf="@id/btn_bottom_sheet_drop_up"
+            android:id="@+id/btn_bottom_sheet_drop_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_arrow_drop_down"
+            tools:ignore="ContentDescription"
+            android:layout_toEndOf="@id/btn_bottom_sheet_drop_up"
+            android:layout_marginStart="@dimen/dp_4" />
+    </RelativeLayout>
+
+    <NumberPicker
+        android:layout_below="@id/menu_bottm_sheet"
+        android:descendantFocusability="blocksDescendants"
+        android:id="@+id/picker_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+    </NumberPicker>
+</RelativeLayout>

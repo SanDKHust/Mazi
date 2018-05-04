@@ -1,12 +1,13 @@
 package vn.edu.hust.soict.khacsan.myapp.model.entity;
 
-import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 
 import java.util.ArrayList;
+
+import vn.edu.hust.soict.khacsan.myapp.model.database.Kana;
 
 public class ItemListKana implements MultiItemEntity, Parcelable {
     public static final int THREE_ITEM = 3;

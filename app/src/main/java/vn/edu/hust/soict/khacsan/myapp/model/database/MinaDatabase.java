@@ -6,5 +6,4 @@ import com.raizlabs.android.dbflow.annotation.Database;
 public class MinaDatabase {
     public static final String NAME = "mina";
     public static final int VERSION = 2;
-
 }

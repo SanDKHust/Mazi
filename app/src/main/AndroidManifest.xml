@@ -23,12 +23,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.activity.ActivityAlphabetTable"
+            android:name=".view.activity.AlphabetTableActivity"
             android:parentActivityName=".view.activity.MainActivity" />
         <activity android:name=".view.activity.FlipItemKanaActivity" />
         <activity android:name=".view.activity.PracticeActivity" />
         <activity android:name=".view.activity.ResultPracticeActivity" />
-        <activity android:name=".view.activity.MActivity"></activity>
+        <activity android:name=".view.activity.MinaActivity"></activity>
     </application>
 
 </manifest>

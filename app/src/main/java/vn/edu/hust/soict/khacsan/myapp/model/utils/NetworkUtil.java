@@ -9,12 +9,10 @@ public class NetworkUtil {
     public static boolean getConnectivityStatus(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
 
-        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-        if (null != activeNetwork) {
-            if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI) return true;
-
-            if (activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE) return true;
+        NetworkInfo activeNetwork = null;
+        if (cm != null) {
+            activeNetwork = cm.getActiveNetworkInfo();
         }
-        return false;
+        return null != activeNetwork && (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI || activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE);
     }
 }

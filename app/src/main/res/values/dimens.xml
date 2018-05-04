@@ -3,4 +3,8 @@
     <dimen name="sizeSVG">220dp</dimen>
     <dimen name="dp_8">8dp</dimen>
     <dimen name="sizeBtnAnswer">100dp</dimen>
+    <dimen name="textSizePhiemAm">16sp</dimen>
+    <dimen name="textSizeMean">16sp</dimen>
+    <dimen name="textSizeJapanese">20sp</dimen>
+    <dimen name="dp_20">20dp</dimen>
 </resources>

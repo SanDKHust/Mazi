@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:segmentedgroup="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/line_audio_fragment_modai_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@drawable/background_audio_controller"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_4"
+            android:weightSum="10">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:visibility="gone"
+                    android:id="@+id/btn_play_or_pause_fm_modai2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/ic_play_arrow" />
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:layout_gravity="center"
+                    android:id="@+id/avi_progress_bar_fm_mondai2"
+                    style="@style/AVLoadingIndicatorView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:visibility="visible"
+                    app:indicatorColor="@color/colorWhite"
+                    app:indicatorName="LineSpinFadeLoaderIndicator" />
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/text_time_play_fm_modai2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="00:00"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <SeekBar
+                android:id="@+id/seek_bar_fm_modai2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6" />
+
+            <TextView
+                android:id="@+id/text_total_time_fm_modai2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-00:00"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:id="@+id/btn_volume_change_fm_modai2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/ic_volume_up_24dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_fm_mondai2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_audio_fragment_modai_2"
+            android:contentDescription="TODO"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <RelativeLayout
+            android:id="@+id/line_question_1_fm_mondai2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_fm_mondai2"
+            android:layout_marginTop="@dimen/dp_8">
+
+            <TextView
+                android:id="@+id/text_index_1_fm_mondai2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/border_ic_volume"
+                android:gravity="center"
+                android:text="1" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButtonGroup
+                android:id="@+id/btn_group1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                app:buttonMode="radio">
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btn_answer_1_index1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="1" />
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btn_answer_2_index1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:text="2"
+                    android:layout_marginStart="@dimen/dp_40" />
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btn_answer_3_index1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_40"
+                    android:text="3" />
+            </com.beardedhen.androidbootstrap.BootstrapButtonGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/line_question_2_fm_mondai2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_question_1_fm_mondai2"
+            android:layout_marginTop="@dimen/dp_8">
+
+            <TextView
+                android:id="@+id/text_index_2_fm_mondai2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/border_ic_volume"
+                android:gravity="center"
+                android:text="2" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButtonGroup
+                android:id="@+id/btn_group2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                app:buttonMode="radio">
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btn_answer_1_index2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="1" />
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btn_answer_2_index2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_40"
+                    android:text="2" />
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btn_answer_3_index2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_40"
+                    android:text="3" />
+            </com.beardedhen.androidbootstrap.BootstrapButtonGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/line_question_3_fm_mondai2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_question_2_fm_mondai2"
+            android:layout_marginTop="@dimen/dp_8">
+
+            <TextView
+                android:id="@+id/text_index_3_fm_mondai2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/border_ic_volume"
+                android:gravity="center"
+                android:text="3" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButtonGroup
+                android:id="@+id/btn_group3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                app:buttonMode="radio">
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btn_answer_1_index3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="1" />
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btn_answer_2_index3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_40"
+                    android:text="2" />
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btn_answer_3_index3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_40"
+                    android:text="3" />
+            </com.beardedhen.androidbootstrap.BootstrapButtonGroup>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_check_fm_mondai2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_question_3_fm_mondai2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/border_btn_check_answer"
+            android:text="@string/text_kiem_tra"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
